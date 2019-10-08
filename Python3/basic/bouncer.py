@@ -8,12 +8,24 @@ age = input("How old are you! ")
 #while age:
 #	input("How old are you! ")
 
+# if age:
+# 	age = int(age)	
+# 	if age>=18 and age <=21:
+# 		print("You can enter but need a to wear a wrist band")
+# 	elif age>21:
+# 		print("Enjoy your concert and have a drink!")
+# 	else:
+# 		print(f"Sorry no entry for you! Come back later after {18-age} years")
+# else:
+# 	print("Please enter a proper age")
+
+
 if age:
 	age = int(age)	
-	if age>=18 and age <=21:
-		print("You can enter but need a to wear a wrist band")
-	elif age>21:
+	if age >= 21:
 		print("Enjoy your concert and have a drink!")
+	elif age>=18:
+		print("You can enter but need a to wear a wrist band")
 	else:
 		print(f"Sorry no entry for you! Come back later after {18-age} years")
 else:
