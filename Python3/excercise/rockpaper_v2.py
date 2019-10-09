@@ -68,3 +68,4 @@ while continue_game == "y" :
 	else:
 		print("Something is fishy, not a valid choice you are making")
 
+print("Thank you for playing with us! see you again SOOOOOOON!\n")
