@@ -12,13 +12,14 @@ def computerMove():
 
 computer_win_count = 0
 player_win_count = 0
-
+gmaes_played = 0
 
 
 continue_game = "y"
 
 while continue_game == "y" :
 	did_player_win = False
+	nobody_wins = False
 	print("Please make a choice from ROCK, PAPER, SCISSOR : ")
 	player1_choice = input(" You : ")
 
@@ -29,6 +30,7 @@ while continue_game == "y" :
 		player2_choice = player2_choice.upper()
 		if player1_choice == player2_choice:
 			print("Shoot you both selected same, GO AGAIN!")
+			nobody_wins = True
 		elif player1_choice == "ROCK":
 			if player2_choice == "SCISSOR":
 				did_player_win = True
@@ -46,16 +48,18 @@ while continue_game == "y" :
 				did_player_win = True
 		
 		print(f"You choose {player1_choice} and Computer choose {player2_choice}")
-		
-		if did_player_win:
-			print("You Win!")
-			player_win_count += 1
-		else:
-			print("Computer Win!")
-			computer_win_count += 1
 
-		
+		if not nobody_wins:
+			if did_player_win:
+				print("You Win!")
+				player_win_count += 1
+			else:
+				print("Computer Win!")
+				computer_win_count += 1
+
+		gmaes_played += 1
 		print("\n ----------- Score Board --------- \n"  )
+		print(f" Games played : {gmaes_played}")
 		print(f" Computer won : {computer_win_count}")
 		print(f" Player   won : {player_win_count}")
 		print("\n -------------------------------- \n")
