@@ -45,6 +45,8 @@ while continue_game == "y" :
 			elif player2_choice == "PAPER":
 				did_player_win = True
 		
+		print(f"You choose {player1_choice} and Computer choose {player2_choice}")
+		
 		if did_player_win:
 			print("You Win!")
 			player_win_count += 1
@@ -52,7 +54,7 @@ while continue_game == "y" :
 			print("Computer Win!")
 			computer_win_count += 1
 
-		print(f"You choose {player1_choice} and Computer choose {player2_choice}")
+		
 		print("\n ----------- Score Board --------- \n"  )
 		print(f" Computer won : {computer_win_count}")
 		print(f" Player   won : {player_win_count}")
