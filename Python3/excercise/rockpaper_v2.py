@@ -22,7 +22,6 @@ while continue_game == "y" :
 	print("Please make a choice from ROCK, PAPER, SCISSOR : ")
 	player1_choice = input(" You : ")
 
-	print("Computer is choosing .... ")
 	player2_choice = computerMove()
 
 	if player1_choice and player2_choice :
@@ -54,11 +53,12 @@ while continue_game == "y" :
 			computer_win_count += 1
 
 		print(f"You choose {player1_choice} and Computer choose {player2_choice}")
-		print("¥n ----------- Score Board --------- ¥n")
+		print("\n ----------- Score Board --------- \n"  )
 		print(f" Computer won : {computer_win_count}")
 		print(f" Player   won : {player_win_count}")
-		print("¥n -------------------------------- ¥n")
+		print("\n -------------------------------- \n")
 		continue_game = input("Do you want to continue playing y/n : ")
+		print("\n")
 	else:
 		print("Something is fishy, not a valid choice you are making")
 
